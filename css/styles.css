@@ -1,0 +1,71 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*::before, *::after {
+    box-sizing: inherit;
+}
+
+.header {
+    display: flex;
+    background-color: #353a40;
+}
+
+.footer {
+    display: flex;
+    background-color: #1e4258;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 12rem;
+}
+
+.conf {
+    color: rgba(254,253,250,255);
+}
+
+.foto {
+    height: 62.5rem;
+    object-fit: cover;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.imagen {
+    border-right: 0.1px solid white;
+}
+
+.tarjeta {
+    background-color: #353a40;
+    color: white;
+    border-left: 0.1px solid white;
+}
+
+.dotted {
+    text-decoration: underline dotted;
+}
+
+.formulario {
+    margin: 0 auto;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cambiocolorboton{
+    background-color: #96c93e !important;
+    color: white !important;
+}
