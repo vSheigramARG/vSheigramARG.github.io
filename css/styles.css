@@ -66,3 +66,45 @@ html {
     background-color: #96c93e !important;
     color: white !important;
 }
+
+.aPagar {
+    display: flex;
+    align-items: center;
+    height: 4.5rem;
+    color: #084c92;
+    background-color: #cce5ff;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.total {
+    display: flex;
+
+}
+
+.cuadrado {
+    width: 25rem;
+    height: 25rem;
+}
+
+.pruebaConBorder {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.error {
+    background-color: red;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.correcto {
+    background-color: green;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    text-transform: uppercase;
+}
