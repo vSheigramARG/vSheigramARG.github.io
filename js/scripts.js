@@ -1,5 +1,6 @@
 //---------Asociar eventos a los elementos------------
 const formulario = document.querySelector(".formulario");
+const reset = document.getElementById("reset");
 
 //----------Evento de Submit--------------
 formulario.addEventListener("submit", function(event){
@@ -16,36 +17,31 @@ formulario.addEventListener("submit", function(event){
 
     let precio = 200;
     if(datos.categoria === "Estudiante"){
-        nuevoPrecio = precio * (datos.cantidad * 0.20) 
+        nuevoPrecio = datos.cantidad * (precio * 0.2) 
         console.log(nuevoPrecio)
     }else{
         if(datos.categoria === "Trainne"){
-            nuevoPrecio = precio * (datos.cantidad * 0.50) 
+            nuevoPrecio = datos.cantidad * (precio * 0.5) 
             console.log(nuevoPrecio)
     }else{
-        nuevoPrecio = precio * (datos.cantidad * 0.85) 
+        nuevoPrecio = datos.cantidad * (precio * 0.85) 
             console.log(nuevoPrecio)
     }
 
 }
 
-
-//--------------Crear elemento de HTML------------
-const nuevoValor = document.createElement("P");
-
-nuevoValor.textContent = nuevoPrecio;
-
-nuevoValor.classList.add(".total");
-
-//------------Agregarlo al documento-------------
-const valor = document.querySelectorAll(".total");
-
-valor[0].appendChild(nuevoValor);
-
+reset.addEventListener("click", function(event){
+    totalAPagar.textContent = "Total a Pagar: $";
 });
 
 
 
+//--------------Reemplazar HTML-------------------
+const totalAPagar = document.getElementById("total");
+
+totalAPagar.textContent = "Total a Pagar: $" + nuevoPrecio;
+
+});
 
 
 //------------Creación de un objeto-----------
@@ -100,7 +96,8 @@ nombre.addEventListener('input', function(event){
         }
     }
 });
-   
+
+
 apellido.addEventListener('input', function(event){
     datos.apellido = event.target.value;
     console.log(datos.apellido);
