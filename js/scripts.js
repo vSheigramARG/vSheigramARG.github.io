@@ -9,22 +9,22 @@ formulario.addEventListener("submit", function(event){
     //Validación de datos
     const {apellido, correo, cantidad, categoria} = datos;
 
-    if(nombre === "" || apellido === "" || correo === "" || cantidad === "" || categoria === ""){
+    if(nombre === "" || apellido === "" || correo === "" || cantidad === ""){
         mostrarMensaje("Alguno de los campos no se completó.", true);
         return;
     }
     //Enviar los datos al backend o informar error
 
     let precio = 200;
-    if(datos.categoria === "Estudiante"){
-        nuevoPrecio = datos.cantidad * (precio * 0.2) 
+    if(datos.categoria === "Junior"){
+        nuevoPrecio = datos.cantidad * (precio * 0.85) 
         console.log(nuevoPrecio)
     }else{
         if(datos.categoria === "Trainne"){
             nuevoPrecio = datos.cantidad * (precio * 0.5) 
             console.log(nuevoPrecio)
     }else{
-        nuevoPrecio = datos.cantidad * (precio * 0.85) 
+        nuevoPrecio = datos.cantidad * (precio * 0.2) 
             console.log(nuevoPrecio)
     }
 
